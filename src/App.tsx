@@ -8,7 +8,10 @@ import RegistrationPage from "./Pages/Registation/RegistrationPage";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>Naranga mittayi vaangi thanna code theraam</Routes>
+      <Routes>
+        <Route path="/" element={<LoginPage />}></Route>
+        <Route path="/registration" element={<RegistrationPage />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
