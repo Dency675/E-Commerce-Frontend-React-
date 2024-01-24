@@ -3,13 +3,15 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaUser, FaEnvelope, FaLock, FaAnchor } from "react-icons/fa";
 import { RegistrationPageProps } from "./types";
 
-const RegistrationPage = ({ register }: RegistrationPageProps) => {
+const RegistrationPage = () => {
+  // const RegistrationPage = ({ register }: RegistrationPageProps) => {
   return (
     <Container fluid className="bg-gradient">
       <Row className="justify-content-center">
         <Col xs={12} md={6} className="bg-light p-4 rounded">
           <h2 className="mt-3 mb-4 text-center">Register for E-Commerce</h2>
-          <Form onSubmit={register}>
+          <Form>
+            {/* <Form onSubmit={register}> */}
             <Form.Group controlId="formFirstName">
               <Form.Label>
                 <FaUser className="mr-2" />
