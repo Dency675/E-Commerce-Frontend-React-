@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FormInput, RegisterFunction } from "./types";
 import RegistrationPage from "./RegistrationPage";
+import { postSupplierRegistration } from "../Registation/api/postSupplier";
 
 const RegistrationHandler = () => {
   const initialFormData = {
@@ -27,12 +28,12 @@ const RegistrationHandler = () => {
   };
   // })}
 
-  // useEffect(() => {
-  //   if (reg_details.client_type === "supplier")
-  //     postSuppilerRegistration(reg_details);
-  //   if (reg_details.client_type === "customer")
-  //     postCustomerRegistration(reg_details);
-  // }, [reg_details]);
+  useEffect(() => {
+    if (reg_details.client_type === "supplier")
+      postSupplierRegistration(reg_details);
+    //   if (reg_details.client_type === "customer")
+    //     postCustomerRegistration(reg_details);
+  }, [reg_details]);
 
   return (
     <div>

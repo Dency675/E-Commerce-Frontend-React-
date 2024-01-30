@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaUser, FaEnvelope, FaLock, FaAnchor } from "react-icons/fa";
 import { RegisterFunction, RegistrationPageProps } from "./types";
-const RegistrationPage = (register: any) => {
+const RegistrationPage = ({ register }: RegistrationPageProps) => {
   // const RegistrationPage = ({ register }: RegistrationPageProps) => {
   return (
     <Container fluid className="bg-gradient">

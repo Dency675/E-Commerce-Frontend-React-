@@ -3,15 +3,14 @@ import React, { useRef } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaAnchor, FaEnvelope, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// import { LoginPageProps } from "./types";
+import { LoginPageProps } from "./types";
 
-// const LoginPage = ({
-//   emailRef,
-//   passwordRef,
-//   clientRef,
-//   onLogin,
-// }: LoginPageProps) => {
-const LoginPage = () => {
+const LoginPage = ({
+  emailRef,
+  passwordRef,
+  clientRef,
+  onLogin,
+}: LoginPageProps) => {
   return (
     <Container fluid className="bg-gradient">
       <Row className="justify-content-center">
@@ -27,7 +26,7 @@ const LoginPage = () => {
                 type="email"
                 placeholder="Enter your email"
                 name="e_mail"
-                // ref={emailRef}
+                ref={emailRef}
                 required
               />
             </Form.Group>
@@ -41,7 +40,7 @@ const LoginPage = () => {
                 type="password"
                 placeholder="Enter your password"
                 name="password"
-                // ref={passwordRef}
+                ref={passwordRef}
                 required
               />
             </Form.Group>
@@ -54,7 +53,7 @@ const LoginPage = () => {
               <Form.Control
                 as="select"
                 name="client_type"
-                // ref={clientRef}
+                ref={clientRef}
                 required
               >
                 <option value="">Select your type</option>
@@ -65,9 +64,9 @@ const LoginPage = () => {
             <Button
               variant="primary"
               type="button"
-              // onClick={() => {
-              //   onLogin && onLogin();
-              // }}
+              onClick={() => {
+                onLogin && onLogin();
+              }}
               className="w-100 mt-3"
             >
               Login
