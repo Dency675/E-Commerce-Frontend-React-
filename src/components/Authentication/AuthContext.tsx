@@ -15,7 +15,7 @@ const AuthContext = ({ children }: { children: ReactNode }) => {
 
     if (response?.token) {
       localStorage.setItem("jwt", response?.token);
-      localStorage.setItem("registraion_id", response?.registraion_id);
+      localStorage.setItem("registraion_id", response?.registration_id);
       localStorage.setItem("role", response?.client_type);
       navigate(`/${response?.client_type}-home`);
     }

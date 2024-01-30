@@ -1,9 +1,9 @@
 // api/postLogin.ts
 import { AxiosError } from "axios";
 import { APIResponseType } from "../../APIHandler/types";
-import axiosInstance from "../../../config/configAxios";
+import { axiosInstance } from "../../../config/configAxios";
 import { baseUrl } from "../../../config/configUrl";
-import { APIResponseHandler } from "../../APIHandler/APIresponseHandler";
+import { APIResponseHandler } from "../../APIHandler/APIResponseHandler";
 import { LoginFormInput, LoginResponse } from "../types";
 
 export const loginUser = async (

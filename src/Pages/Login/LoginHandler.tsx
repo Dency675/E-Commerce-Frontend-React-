@@ -1,7 +1,7 @@
 // LoginHandler.tsx
 import React, { useContext, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../../components/Authentication/api/postLogin";
+// import { useNavigate } from "react-router-dom";
+// import { loginUser } from "../../../components/Authentication/api/postLogin";
 import LoginPage from "./LoginPage";
 import { LoginFunction } from "./types";
 import { Authorization } from "../../components/Authentication/AuthContext";
